@@ -58,9 +58,9 @@ Options:
 - **Remplit le document** avec les informations de nom et d'adresse
 - Ajoute la date et l'heure avec un **delta de +x minutes** (pour compter le temps de sortir effectivement)
 - **Coche la justification** en fonction de l'option
-- Genere le fichier dans /tmp (Linux) et **fournil son lien** pour l'afficher et l'imprimer manuellement si besoin dans le browser
+- Genere le fichier dans /tmp (Linux) et **fournit son lien** pour l'afficher et l'imprimer manuellement si besoin dans le browser
 - Si possible, envoie le fichier a **l'imprimante** (Linux)
-- Si possible, fournit une *petite citation* pour egayer votre sortie
+- Si possible, fournit une **citation** pour egayer votre sortie
 
 
 
@@ -82,7 +82,7 @@ pip install -r requirements.txt
 source venv/bin/activate
 ```
 
-Il faut au prealable configurer ces variables d'environnement (ex dans .bashrc) contenant les informations necessaires a la derogation :
+Il faut au prealable configurer ces variables d'environnement (ex en les mettant dans .bashrc) contenant les informations necessaires a la derogation :
 
 ### Obligatoires
 
@@ -102,7 +102,7 @@ Ajouter un nombre de minutes, pour compter le temps de effectivement sortir de c
 export DEROG_DELTA_MINUTES=10  # Minutes a ajouter au temps courant pour l'heure de signature
 ```
 
-Definir l'imprimante pour imprimer automatiquement
+Definir l'imprimante pour imprimer le document avec lpr
 
 ```
 export DEROG_PRINTER="Samsung-M2020-Series"  # Nom de l'imprimante installee
@@ -132,8 +132,8 @@ python derogator.py --reason sport
 ## Limitations
 
 Concu pour
-- Une seule personne, pour plusieurs il faudrait un fichier de settings et pouvoir saisir la personne concernee
-- Linux (il faudrait changer le path /tmp si usage de window)
+- Une seule personne, pour plusieurs il faudrait un fichier de settings et pouvoir saisir la personne concernee en option
+- Linux (voir les commentaires Linux pour le rendre compatible windows)
 
 
 ### Avertissement

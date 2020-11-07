@@ -6,6 +6,9 @@ import click
 from generator import generate, CHOICE_ACHATS, HELP
 
 
+DEFAULT_DELTA_MINUTES = int(os.environ.get('DEROG_DELTA_MINUTES', 5))
+
+
 def print_file(filepath):
     """
     Only for Linux
@@ -38,11 +41,11 @@ def tell_fortune():
 
 @click.command()
 @click.option('--reason', default=CHOICE_ACHATS, help=HELP)
-def derogate(reason):
-    delta_minutes = int(os.environ.get('DEROG_DELTA_MINUTES', 5))
-    filepath = generate(reason, delta_minutes)
+@click.option('--minutes', default=DEFAULT_DELTA_MINUTES, help="Minutes a ajouter a l'heure courante")
+def derogate(reason, minutes):
+    filepath = generate(reason, minutes)
     fileuri = 'file://' + filepath
-    print(f"derogation {reason} (+{delta_minutes}m) : {fileuri}")
+    print(f"derogation {reason} (+{minutes}m) : {fileuri}")
     print_file(filepath)
     print('')
     tell_fortune()

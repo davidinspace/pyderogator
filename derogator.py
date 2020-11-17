@@ -18,7 +18,7 @@ def print_file(filepath):
         print('No printer configured (see README)')
         return
 
-    command = f'lpr -P {printer} {filepath}'
+    command = f'lpr -o print-quality=3 -P {printer} {filepath}'
     result = os.system(command)
     if result != 0:
         print(f'Unknown printer error for {command}')

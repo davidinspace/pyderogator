@@ -20,7 +20,7 @@ CHOICES = [
     'mission',
     'enfant'
 ]
-HELP = 'Veuillez choisir entre : ' + ', '.join(CHOICES)
+HELP_CHOICES = 'Veuillez choisir entre : ' + ', '.join(CHOICES)
 EMPTY_CHOICE = '| |'
 FILLED_CHOICE = '|X|'
 
@@ -34,14 +34,15 @@ def _get_template():
 
 def _get_reasons(reason):
     if reason not in CHOICES:
-        raise ValueError(f"Votre choix {reason} n'est pas valide. {HELP}")
+        raise ValueError(f"Votre choix {reason} n'est pas valide. {HELP_CHOICES}")
     reasons = {choice: EMPTY_CHOICE for choice in CHOICES}
     reasons[reason] = FILLED_CHOICE
     return reasons
 
 
-def _render(template, reason, delta_minutes):
+def _render(template, reason, delta_minutes, notime):
     now = datetime.datetime.now() + datetime.timedelta(minutes=delta_minutes)
+    hour = now.strftime('%Hh%M') if notime else ""
     data = {**_get_reasons(reason), **{
         'name': os.environ['DEROG_NAME'],
         'birth_date': os.environ['DEROG_BIRTH_DATE'],
@@ -49,7 +50,7 @@ def _render(template, reason, delta_minutes):
         'address': os.environ['DEROG_ADDRESS'],
         'sign_place': os.environ['DEROG_SIGN_PLACE'],
         'date': now.strftime('%d/%m/%Y'),
-        'hour': now.strftime('%Hh%M')
+        'hour': hour
     }}
     return template.render(**data)
 
@@ -61,8 +62,8 @@ def _save_derogation(output):
     return filepath
 
 
-def generate(reason, delta_minutes):
+def generate(reason, delta_minutes, notime):
     template = _get_template()
-    output = _render(template, reason, delta_minutes)
+    output = _render(template, reason, delta_minutes, notime)
     filepath = _save_derogation(output)
     return filepath

@@ -1,36 +1,64 @@
 ﻿ATTESTATION DE DÉPLACEMENT DÉROGATOIRE
-En application du décret n°2020-1310 du 29 octobre 2020 prescrivant les mesures générales nécessaires pour faire face à l'épidémie de Covid19 dans le cadre de l'état d'urgence sanitaire
+En application de l’article 4 du décret n°2020-1310 du 29 octobre 2020 prescrivant les mesures générales nécessaires pour faire face à l’épidémie de COVID-19 dans le cadre de l’état d’urgence sanitaire
 
 Je soussigné(e),
 {{ name }}
 Né(e) le {{ birth_date }} à {{ birth_place }}
 Demeurant : {{ address }}
 
-Certifie que mon déplacement est lié au motif suivant (cocher la case) autorisé par le décret n°2020-1310 du 29 octobre 2020 prescrivant les mesures générales nécessaires pour faire face à l'épidémie de Covid19 dans le cadre de l'état d'urgence sanitaire (1) :
+certifie que mon déplacement est lié au motif suivant (cocher la case) autorisé en application des mesures générales nécessaires pour faire face à l’épidémie de COVID-19 dans le cadre de l’état d’urgence sanitaire1 :
+1. Activité professionnelle, enseignement et formation *
+{{ pro }} Déplacements entre le domicile et le lieu d’exercice de l’activité professionnelle ou le lieu d’enseignement et de formation, déplacements professionnels ne pouvant être différés
 
-{{ pro }}  Déplacements entre le domicile et le lieu d’exercice de l’activité professionnelle ou un établissement d’enseignement ou de formation, déplacements professionnels ne pouvant être différés, déplacements pour un concours ou un examen.
+2. Consultations et soins *
+{{ soins }} Déplacements pour des consultations, examens, actes de prévention (dont vaccination) et soins ne pouvant être assurés à distance ou pour l’achat de produits de santé
 
-{{ achats }} Déplacements pour se rendre dans un établissement culturel autorisé ou un lieu de culte ; déplacements pour effectuer des achats de biens, pour des services dont la fourniture est autorisée, pour les retraits de commandes et les livraisons à domicile.
+3. Motif familial impérieux, personnes vulnérables ou précaires ou gardes d’enfants*
+{{ famille }} Déplacements pour motif familial impérieux, pour l’assistance aux personnes vulnérables ou  précaires ou pour la garde d’enfants
 
-{{ soins }}  Consultations, examens et soins ne pouvant être assurés  à distance et l’achat de médicaments.
+4. Situation de handicap *
+{{ handicap }} Déplacements des personnes en situation de handicap et de leur accompagnant
 
-{{ famille }}  Déplacements pour motif familial impérieux, pour l'assistance aux personnes vulnérables et précaires ou la garde d'enfants.
+5. Convocation judiciaire ou administrative *
+{{ judiciaire }} Déplacements pour répondre à une convocation judiciaire ou administrative, déplacements pour se rendre chez un professionnel du droit, pour un acte ou une démarche qui ne peuvent être réalisés à distance
 
-{{ handicap }}  Déplacement des personnes en situation de handicap et leur accompagnant.
+6. Mission d’intérêt général *
+{{ mission }} Déplacements pour participer à des missions d’intérêt général sur demande de l’autorité administrative
 
-{{ sport }} Déplacements en plein air ou vers un lieu de plein air, sans changement du lieu de résidence, dans la limite de trois heures quotidiennes et dans un rayon maximal de vingt kilomètres autour du domicile, liés soit à l’activité physique ou aux loisirs individuels, à l’exclusion de toute pratique sportive collective et de toute proximité avec d’autres personnes, soit à la promenade avec les seules personnes regroupées dans un même domicile, soit aux besoins des animaux de compagnie.
+7. Déplacements de transit et longue distance
+{{ transit }} Déplacements liés à des transits ferroviaires, aériens ou en bus pour des déplacements de longues distances
 
-{{ judiciaire }}  Convocation judiciaire ou administrative et pour se rendre dans un service public
+8. Animaux de compagnie
+{{ animaux }} Déplacements brefs dans un rayon maximal d'un kilomètre autour du domicile pour les besoins des animaux de compagnie
+MOTIFS SUPPLÉMENTAIRES APPLICABLES UNIQUEMENT DE 6H À 19 H DANS LES TERRITOIRES SOUMIS À DES MESURES RENFORCEES
 
-{{ mission }}  Participation à des missions d'intérêt général sur demande de l'autorité administrative
+Dans les départements soumis à des mesures renforcées, les déplacements ne sont autorisés qu’au sein du département ou d’un périmètre défini par un rayon de 30 km autour du lieu de résidence sauf pour les items signalés par un astérisque (*) sur la présente attestation ainsi que pour les déplacements autorisés par l’article 56-5 du décret du 29 octobre 2020 modifié.
 
-{{ enfant }}  Déplacement pour chercher les enfants à l’école et à l’occasion de leurs activités périscolaires
+Les personnes résidant dans les départements n’étant pas soumis à des mesures renforcées ne peuvent entrer dans les départements soumis à des mesures renforcées au-delà d’un périmètre défini par un rayon de 30 km autour de leur lieu de résidence que pour les items signalés par un astérisque sur la présente attestation ainsi que dans le cadre de déplacements de longue distance conduisant seulement à un transit par une zone soumise à des mesures renforcées.
+
+9. Achats professionnels et livraisons à domicile *
+ Déplacements pour effectuer des achats de fournitures nécessaires à l'activité professionnelle, ou pour des livraisons à domicile
+
+10. Achats
+{{ achats }} Déplacements pour effectuer des achats de première nécessité ou des retraits de commandes
+11. Déménagement *
+{{ demenag }} Déplacements liés à un déménagement résultant d'un changement de domicile et déplacements indispensables à l'acquisition ou à la location d’une résidence principale, insusceptibles d'être différés
+
+12. Activités physiques et promenade
+{{ sport }} Déplacements dans un rayon maximal de dix kilomètres autour du domicile, liés soit à l'activité physique individuelle des personnes, à l'exclusion de toute pratique sportive collective, soit à la promenade avec les seules personnes regroupées dans un même domicile
+
+13. Démarches administratives ou juridiques
+{{ judiciaire }} Déplacements pour se rendre dans un service public pour un acte ou une démarche qui ne peuvent être réalisés à distance
+
+14. Culte
+[  ] Déplacements à destination ou en provenance d'un lieu de culte 
+15. Participation à des rassemblements autorisés *
+[  ] Participation à des rassemblements, réunions ou activités sur la voie publique ou dans un lieu ouvert au public qui ne sont pas interdits en application de l'article 3
 
 
 Fait à : {{ sign_place }}
 Le {{ date }} à {{ hour }}
 (Date et heure de début de sortie à mentionner obligatoirement)
 
-
-Signature :
+Signature :
 
